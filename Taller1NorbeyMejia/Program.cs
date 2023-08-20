@@ -22,7 +22,7 @@ int resDenominador;
 
 
 string res = "";
-bool encontrado = false;
+//bool encontrado = false;
 
 
 
@@ -65,18 +65,25 @@ do
             switch (operacion)
             {
                 case "+":
-
+                    int i = 1;
                     resNumerador = (numerador1 * denominador2) + (numerador2 * denominador1);
                     resDenominador = denominador1 * denominador2;
                     res = numerador1 + "/" + denominador1 + "  /  " + numerador2 + "/" + denominador2 + "  =  " + resNumerador + "/" + resDenominador;
                     Console.WriteLine(res);
+                    /*  
+                                        while (encontrado)
+                                        {
+                                            if (i % numerador1 == 0 && i % numerador1 == 0)
+                                            {
+                                                resDenominador = i;
+                                                resNumerador = (numerador1 * denominador2) + (numerador2 * denominador1);
+                                                res = numerador1 + "/" + denominador1 + "  /  " + numerador2 + "/" + denominador2 + "  =  " + resNumerador + "/" + resDenominador;
+                                                Console.WriteLine(res);
+                                                encontrado = true;                            
+                                            }
+                                            i++;
+                                        } */
 
-                    /* while (!encontrado)
-                    {
-
-                        
-                    }
-                    */
                     break;
 
                 case "-":
