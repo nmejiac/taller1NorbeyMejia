@@ -2,6 +2,8 @@
 Console.WriteLine("PUNTO 4");
 
 string palabraCompleta = "El gato juega en el jardin";
+
+
 string palabra1 = "El ";
 string palabra2 = " juega ";
 string palabra3 = " el ";
@@ -21,9 +23,14 @@ string resultadoPalabra = "";
 string tp1;
 int intentos = 3;
 
+Console.WriteLine("Complete la palabra ");
+/* "El _____ juega _____ el _____". */
+Console.WriteLine(palabra1 + "____" + palabra2 + "______" + palabra3 + "______");
+
 while (intentos > 0 /* || resultadoPalabra.Equals(palabraCompleta) */)
 {
-    Console.WriteLine(intentos);
+    //Console.WriteLine(intentos);
+    Console.WriteLine("\n");
     Console.WriteLine("Ingrese palabra");
     tp1 = Console.ReadLine();
 
@@ -51,8 +58,9 @@ while (intentos > 0 /* || resultadoPalabra.Equals(palabraCompleta) */)
                 break;
         }
         resultadoPalabra = palabra1 + palabra2 + palabra3;
+        Console.WriteLine(resultadoPalabra); 
         /* Console.WriteLine(resultadoPalabra.Equals(palabraCompleta));
-        Console.WriteLine(resultadoPalabra); */
+        */
         //Console.WriteLine(resultadoPalabra);
 
         if (resultadoPalabra.Equals(palabraCompleta))
