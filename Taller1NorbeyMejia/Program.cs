@@ -30,7 +30,7 @@ Console.Clear();
 
 do
 {
-    Console.WriteLine("Seleccione\n 1. Realizar operación\n 2. Mostrar la última operación realizada\n 3. Salir\n ");
+    Console.WriteLine("Seleccione\n 1. Realizar operación\n  2. Salir\n ");
     opc = Int32.Parse(Console.ReadLine());
 
     switch (opc)
@@ -66,9 +66,19 @@ do
             {
                 case "+":
                     int i = 1;
-                    resNumerador = (numerador1 * denominador2) + (numerador2 * denominador1);
-                    resDenominador = denominador1 * denominador2;
-                    res = numerador1 + "/" + denominador1 + "  /  " + numerador2 + "/" + denominador2 + "  =  " + resNumerador + "/" + resDenominador;
+
+                    if (denominador1 == denominador2)
+                    {
+                        resNumerador = numerador1 + numerador2;
+                        resDenominador = denominador1;
+                    }
+                    else
+                    {
+                        resNumerador = (numerador1 * denominador2) + (numerador2 * denominador1);
+                        resDenominador = denominador1 * denominador2;
+                    }
+
+                    res = numerador1 + "/" + denominador1 + "  +  " + numerador2 + "/" + denominador2 + "  =  " + resNumerador + "/" + resDenominador;
                     Console.WriteLine(res);
                     /*  
                                         while (encontrado)
@@ -87,10 +97,19 @@ do
                     break;
 
                 case "-":
-                    //resultado = num1 - num2;
-                    resNumerador = (numerador1 * denominador2) - (numerador2 * denominador1);
-                    resDenominador = denominador1 * denominador2;
-                    res = numerador1 + "/" + denominador1 + "  /  " + numerador2 + "/" + denominador2 + "  =  " + resNumerador + "/" + resDenominador;
+
+                    if (denominador1 == denominador2)
+                    {
+                        resNumerador = numerador1 - numerador2;
+                        resDenominador = denominador1;
+                    }
+                    else
+                    {
+                        resNumerador = (numerador1 * denominador2) - (numerador2 * denominador1);
+                        resDenominador = denominador1 * denominador2;
+                    }
+
+                    res = numerador1 + "/" + denominador1 + "  -  " + numerador2 + "/" + denominador2 + "  =  " + resNumerador + "/" + resDenominador;
                     Console.WriteLine(res);
                     break;
 
@@ -127,16 +146,8 @@ do
             }
             break;
 
-        case 2:
-            if (res == "")
-            {
-                Console.WriteLine("no se a realizado ninguna operacion ");
-                break;
-            }
-            Console.WriteLine(res);
-            break;
 
-        case 3:
+        case 2:
             Console.WriteLine("Saliendo...");
             break;
 
@@ -146,6 +157,6 @@ do
             break;
     }
 
-} while (opc != 3);
+} while (opc != 2);
 
 Console.WriteLine("Salio");
