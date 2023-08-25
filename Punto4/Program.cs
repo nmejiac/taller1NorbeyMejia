@@ -20,7 +20,7 @@ bool encontrado3 = false;
 string resultadoPalabra = "";
 
 
-string tp1;
+string tp1 = "";
 int intentos = 3;
 
 Console.WriteLine("Complete la palabra ");
@@ -32,7 +32,8 @@ while (intentos > 0 /* || resultadoPalabra.Equals(palabraCompleta) */)
     //Console.WriteLine(intentos);
     Console.WriteLine("\n");
     Console.WriteLine("Ingrese palabra");
-    tp1 = Console.ReadLine();
+    tp1 = Console.ReadLine().ToLower();
+    
 
     if ((tp1.Equals(p1) && !encontrado1) || (tp1.Equals(p2) && !encontrado2) || (tp1.Equals(p3) && !encontrado3))
     {

@@ -5,7 +5,7 @@ string num;
 int sumaDigitos = 0;
 int numero;
 
-Console.WriteLine("Ingrese palabra:");
+Console.WriteLine("Ingrese Numero:");
 num = Console.ReadLine();
 numero = Int32.Parse(num);
 

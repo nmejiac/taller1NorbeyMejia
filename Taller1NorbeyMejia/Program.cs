@@ -65,7 +65,7 @@ do
             switch (operacion)
             {
                 case "+":
-                    int i = 1;
+                    //int i = 1;
 
                     if (denominador1 == denominador2)
                     {

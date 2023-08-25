@@ -53,10 +53,10 @@ for (int i = inic_rango; i <= fin_rango; i++)
     {
         Console.WriteLine("Cual es el numero que fatla? ");
         valor = Int32.Parse(Console.ReadLine());
-        Console.WriteLine("No Paso");
+        //Console.WriteLine("No Paso");
     }
     
-    Console.WriteLine("Paso");
+    //Console.WriteLine("Paso");
     /*  continue; */
 
 }
