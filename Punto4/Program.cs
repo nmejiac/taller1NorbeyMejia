@@ -21,7 +21,7 @@ string resultadoPalabra = "";
 
 
 string tp1 = "";
-int intentos = 3;
+int intentos = 10;
 
 Console.WriteLine("Complete la palabra ");
 /* "El _____ juega _____ el _____". */
